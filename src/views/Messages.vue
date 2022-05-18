@@ -127,7 +127,7 @@
 
 		<div class="room-container">
 			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM </h1>
+			<h1><i class="fas fa-smile"></i>ROOM 6</h1>
 			</header>
 			<main class="join-main">
 				<form action="chat.html">	
