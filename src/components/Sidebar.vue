@@ -1,12 +1,12 @@
 <template>
     <div class="sidebar">
         <div class="title">
-            Simple Sidebar
+            Online Chat
         </div>
         <div class="menu-items">
-            <router-link to="/" active-class="active" exact class="side-btn">
+            <router-link to="/introduce" active-class="active" exact class="side-btn">
                 <div class="link-container">
-                    Overview
+                    Introduce
                 </div>
             </router-link>
             <router-link to="/messages" active-class="active"  exact class="side-btn">

@@ -1,16 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import dashboard from '../views/Dashboard'
 import Message from '../views/Messages.vue'
-import Overview from '../views/Overview.vue'
+import Introduce from '../views/Introduce.vue'
 
 const routes = [{
   path: '',
   component: dashboard,
   children:[
   {
-    path: '/',
-    name: 'Overview',
-    component: Overview
+    path: '/introduce',
+    name: 'Introduce',
+    component: Introduce
   },
   {
     path: '/messages',

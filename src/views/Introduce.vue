@@ -1,24 +1,24 @@
 <template>
-    <div class="overview">
-        Overview
+    <div class="introduce">
+        Introduce
     </div>
 </template>
 
 <script>
     export default {
-        name:'Overview-view'
+        name:'Introduce-view'
     }
 </script>
 
 <style scoped>
-.overview {
+.introduce {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
     font-size: 40px;
-    color: rgb(167, 167, 167);
+    color: rgb(19, 18, 18);
     font-weight: 600;
 }
 </style>

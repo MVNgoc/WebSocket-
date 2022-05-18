@@ -1,7 +1,7 @@
 <template>
     <div class="join-container">
 			<header class="join-header">
-				<h1><i class="fas fa-smile"></i> ChatCord</h1>
+				<h1><i class="fas fa-smile"></i>ChatCord</h1>
 			</header>
 			<main class="join-main">
 				<form action="chat.html">
