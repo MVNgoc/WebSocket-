@@ -45,59 +45,97 @@ a {
 .join-container {
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
+	align-items: center;
 	width: 100%;
+	height: 100%;
 	color: #fff;
-	padding-top: 55px;
+	padding: 30px;
 }
 
-.join-container .room-container {
-	margin: 0 15px 15px 15px;
-} 
-
-.join-header {
-	text-align: center;
-	padding: 10px;
-	background: var(--dark-color-a);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
+.join-container .user-information {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+	height: 70%;
+	background-color: rgb(183, 255, 255);
+	margin-right: 20px;
+	border-radius: 10px;
 }
 
-.join-main {
-	padding: 30px 40px;
-	background: var(--dark-color-b);
-}
-
-.join-main .form-control {
-	margin-bottom: 10px;
-}
-
-.join-main label {
+.user-information #btn-create-chat-room {
 	display: block;
-	margin-bottom: 5px;
-}
-
-.join-main input[type='text'] {
-	font-size: 16px;
-	padding: 5px;
-	height: 40px;
-	width: 100%;
-}
-
-.join-main .btn {
 	margin-top: 20px;
-	width: 100%;
+	border: 0;
+	border-radius: 10px;
+	width: 100px;
+	height: 40px;
+	font-size: 16px;
+	background-color: rgb(8, 160, 160);
+	color: var(--light-color);
 }
 
-.join-main .online-users {
+.user-information #btn-create-chat-room:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.join-container .username {
+	color: #000;
+	margin-right: 20px;
+	font-size: 20px;
+}
+
+.user-information #input-username {
+	border-radius: 10px;
+	border: 0;
+	width: 300px;
+	height: 40px;
+	padding: 10px;
+	font-size: 16px;
+}
+
+.join-container .chat-rooms {
+	width: 30%;
+	height: 70%;
+	background-color: rgb(183, 255, 255);
+	border-radius: 10px;	
+}
+
+.chat-rooms .chat-room {
+	background-color: var(--light-color);
+	color: #000;
+	margin: 12px;
+	border-radius: 10px;
+}
+
+.chat-room .chat-room-header {
+	background-color: var(--dark-color-a);
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	padding: 5px;
+}
+
+.chat-room .chat-room-main {
+	padding-top: 10px;
+	padding-bottom: 10px;	
+}
+
+.chat-room-main .chat-room-online-user {
 	font-size: 26px;
 }
-@media (max-width: 700px) {
-	.chat-main {
-		display: block;
-	}
 
-	.chat-sidebar {
-		display: none;
-	}
+.chat-room-main .chat-room-btn-join {
+	border: 0;
+	background-color: rgb(8, 160, 160);
+	color: white;
+	border-radius: 10px;
+	width: 100px;
+	height: 30px;
+	margin-top: 10px;
+}
+
+.chat-room-main .chat-room-btn-join:hover {
+	cursor: pointer;
+	opacity: 0.7;
 }

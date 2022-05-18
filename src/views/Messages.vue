@@ -1,153 +1,46 @@
 <template>
     <div class="join-container">
-		<div class="room-container">
-			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM 1</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">	
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label>Online</label>
-						<p class="online-users">5</p>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
+		<div class="user-information">
+			<div class="user-name-form">
+				<label class="username" for="input-username">Tên của bạn</label>
+				<input type="text" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username">
+				<button id="btn-create-chat-room">Tạo phòng</button>
+			</div>
 		</div>
 
-		<div class="room-container">
-			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM 2</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">	
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label>Online</label>
-						<p class="online-users">5</p>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
-		</div>
+		<div class="chat-rooms"> 
+			<div class="chat-room">
+				<header class="chat-room-header">
+					<h3>Phòng chat 1</h3>
+				</header>
+				<main class="chat-room-main">
+					<p>Online</p>
+					<p class="chat-room-online-user">5</p>
+					<button class="chat-room-btn-join">Tham gia</button>
+				</main>
+			</div>
 
-		<div class="room-container">
-			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM 3</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">	
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label>Online</label>
-						<p class="online-users">5</p>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
-		</div>
+			<div class="chat-room">
+				<header class="chat-room-header">
+					<h3>Phòng chat 2</h3>
+				</header>
+				<main class="chat-room-main">
+					<p>Online</p>
+					<p class="chat-room-online-user">5</p>
+					<button class="chat-room-btn-join">Tham gia</button>
+				</main>
+			</div>
 
-		<div class="room-container">
-			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM 4</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">	
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label>Online</label>
-						<p class="online-users">5</p>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
-		</div>
-
-		<div class="room-container">
-			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM 5</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">	
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label>Online</label>
-						<p class="online-users">5</p>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
-		</div>
-
-		<div class="room-container">
-			<header class="join-header">
-			<h1><i class="fas fa-smile"></i>ROOM 6</h1>
-			</header>
-			<main class="join-main">
-				<form action="chat.html">	
-					<div class="form-control">
-						<label for="username">Username</label>
-						<input
-							type="text"
-							name="username"
-							id="username"
-							placeholder="Enter username..."
-							required
-						/>
-					</div>
-					<div class="form-control">
-						<label>Online</label>
-						<p class="online-users">5</p>
-					</div>
-					<button type="submit" class="btn">Join Chat</button>
-				</form>
-			</main>
+			<div class="chat-room">
+				<header class="chat-room-header">
+					<h3>Phòng chat 3</h3>
+				</header>
+				<main class="chat-room-main">
+					<p>Online</p>
+					<p class="chat-room-online-user">5</p>
+					<button class="chat-room-btn-join">Tham gia</button>
+				</main>
+			</div>
 		</div>
 	</div>
 </template>
