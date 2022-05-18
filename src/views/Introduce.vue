@@ -1,6 +1,6 @@
 <template>  
     <div class="introduce">
-        Introduce
+        <h1>Introduce</h1>
     </div>
 </template>
 
@@ -14,5 +14,8 @@
 .introduce {
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>
