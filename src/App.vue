@@ -34,7 +34,6 @@ import Sidebar from './components/Sidebar'
     height: 100vh;
     width: 100vw;
 }
-
 .content {
     background-color: white;
     border-radius: 10px;
