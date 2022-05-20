@@ -1,11 +1,11 @@
 <template>
-    <div class="join-container" :style="{
-        'background-image': `url(${require('@/img/introduce_background.png')})`,}">
+    <form action="#" class="join-container" :style="{
+        'background-image': `url(${require('@/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
 		<div class="user-information">
 			<div class="user-name-form">
 				<label class="username" for="input-username">Tên của bạn</label>
 				<input type="text" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username">
-				<button id="btn-create-chat-room">Tạo phòng</button>
+				<button type="submit" id="btn-create-chat-room">Tạo phòng</button>
 			</div>
 		</div>
 
@@ -17,7 +17,9 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">5</p>
-					<button class="chat-room-btn-join">Tham gia</button>
+					<router-link :to="{name : 'messenger'}">
+						<button class="chat-room-btn-join">Tham gia</button>
+					</router-link>
 				</main>
 			</div>
 
@@ -28,7 +30,9 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">5</p>
-					<button class="chat-room-btn-join">Tham gia</button>
+					<router-link :to="{name : 'messenger'}">
+						<button class="chat-room-btn-join">Tham gia</button>
+					</router-link>
 				</main>
 			</div>
 
@@ -39,16 +43,18 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">5</p>
-					<button class="chat-room-btn-join">Tham gia</button>
+					<router-link :to="{name : 'messenger'}">
+						<button class="chat-room-btn-join">Tham gia</button>
+					</router-link>
 				</main>
 			</div>
 		</div>
-	</div>
+	</form>
 </template>
 
 <script>
     export default {
-        name:'Message-view'
+        name:'Chatroom-view'
     }
 </script>
 

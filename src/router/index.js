@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Chatroom from '../views/Chatroom.vue'
 import Dashboard from '../views/Introduce.vue'
+import Messenger from '../views/Messenger.vue'
 
 const routes = [
   {
@@ -12,6 +13,11 @@ const routes = [
     path: '/chatroom',
     name: 'chatroom',
     component: Chatroom
+  },
+  {
+    path: '/messenger',
+    name: 'messenger',
+    component: Messenger
   },
 ]
 
