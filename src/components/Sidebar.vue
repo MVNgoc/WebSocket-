@@ -4,12 +4,12 @@
             Online Chat
         </div>
         <div class="menu-items">
-            <router-link to="/introduce" active-class="active" exact class="side-btn">
+            <router-link :to="{name : 'dashboard'}" active-class="active" class="side-btn">
                 <div class="link-container">
                     Introduce
                 </div>
             </router-link>
-            <router-link to="/messages" active-class="active"  exact class="side-btn">
+            <router-link :to="{name : 'chatroom'}" active-class="active" class="side-btn">
                 <div class="link-container">
                     Chat Room
                 </div>

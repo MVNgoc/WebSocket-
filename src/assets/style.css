@@ -14,12 +14,7 @@
 	padding: 0;
 }
 
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	background: var(--light-color);
-	margin: 20px;
-}
+
 
 ul {
 	list-style: none;
@@ -57,7 +52,7 @@ a {
 	justify-content: center;
 	align-items: center;
 	width: 70%;
-	height: 70%;
+	height: 95%;
 	background-color: rgb(183, 255, 255);
 	margin-right: 20px;
 	border-radius: 10px;
@@ -97,7 +92,7 @@ a {
 
 .join-container .chat-rooms {
 	width: 30%;
-	height: 70%;
+	height: auto;
 	background-color: rgb(183, 255, 255);
 	border-radius: 10px;	
 }

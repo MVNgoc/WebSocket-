@@ -1,25 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import dashboard from '../views/Dashboard'
-import Message from '../views/Messages.vue'
-import Introduce from '../views/Introduce.vue'
+import Chatroom from '../views/Chatroom.vue'
+import Dashboard from '../views/Introduce.vue'
 
-const routes = [{
-  path: '',
-  component: dashboard,
-  children:[
+const routes = [
   {
-    path: '/introduce',
-    name: 'Introduce',
-    component: Introduce
+    path: '/',
+    name: 'dashboard',
+    component: Dashboard
   },
   {
-    path: '/messages',
-    name: 'messages',
-    component: Message
+    path: '/chatroom',
+    name: 'chatroom',
+    component: Chatroom
   },
-  
-]
-}
 ]
 
 const router = createRouter({

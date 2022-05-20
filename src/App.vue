@@ -1,12 +1,21 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <div class="dashboard">
+        <Sidebar/>
+        <div class="content">
+            <router-view/>
+        </div>
+    </div>
   </div>
 </template>
 
 <script>
+import Sidebar from './components/Sidebar'
   export default {
-    name: 'App'
+    name: 'App',
+      components: {
+        Sidebar
+    }
   }
 </script>
 
@@ -18,10 +27,17 @@
   text-align: center;
   color: #2c3e50;
 }
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    background-color: teal;
+    height: 100vh;
+    width: 100vw;
+}
 
-body {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+.content {
+    background-color: white;
+    border-radius: 10px;
+    margin: 6px 6px 6px 0px;
 }
 </style>

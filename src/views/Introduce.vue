@@ -1,5 +1,6 @@
 <template>  
-    <div class="introduce">
+    <div class="introduce" :style="{
+        'background-image': `url(${require('@/img/introduce_background.png')})`,}">
         <h1>Introduce</h1>
     </div>
 </template>
