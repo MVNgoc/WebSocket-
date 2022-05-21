@@ -145,8 +145,8 @@ a {
 }
 
 .mess-container .messenger {
-	width: 1000px;
-	height: 700px;
+	max-width: fit-content;
+	max-height: fit-content;
 	box-sizing: border-box;
 	border-radius: 10px;
 	background-color: #fff;
