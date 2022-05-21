@@ -31,8 +31,10 @@ import Sidebar from './components/Sidebar'
     display: grid;
     grid-template-columns: 1fr 5fr;
     background-color: teal;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    height: auto;
+    width: auto;
+    min-width: 100vw;
 }
 .content {
     background-color: white;

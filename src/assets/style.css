@@ -146,7 +146,8 @@ a {
 
 .mess-container .messenger {
 	width: 80%;
-	height: 92%;
+	/* min-height: 92%; */
+	height: auto;
 	box-sizing: border-box;
 	border-radius: 10px;
 	background-color: #fff;
@@ -208,18 +209,19 @@ a {
 }
 
 .user-mess-area .messBottom {
-	margin-right: 780px;
+	margin-right: 78%;
 	margin-top: 5px;
 }
 
 .others-mess-area .messBottom {
-	margin-left: 780px;
+	margin-left: 78%;
 	margin-top: 5px;
 }	
 
 .messenger .text-area {
+	box-sizing: border-box;
 	width: 100%;
-	max-height: 150px;
+	height: auto;
 	display: flex;
 	margin-bottom: 20px;
 	justify-content: space-around;
@@ -250,4 +252,76 @@ a {
 .text-area .text-btn .text-send:hover {
 	cursor: pointer;
 	background-color: rgb(62, 117, 188);
+}
+
+/* 150% */
+@media (min-width: 900px) and (max-width: 1000px) {
+	.mess-container .messenger {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.messenger .text-area {
+		margin-top: 20px;
+		height: 50px;
+	}
+	
+	.text-area .text-mess .text-input {
+		width: 500px;
+		height: 60px;
+	}
+
+	.text-area .text-btn .text-send {
+		border: 0;
+		background-color: rgb(71, 132, 213);
+		color: var(--light-color);
+		border-radius: 10px;
+		width: 80px;
+		height: 30px;
+		font-size: 16px;
+		margin-top: 16px;
+		
+	}
+
+	.user-mess-area .messBottom {
+		margin-right: 68%;
+	}
+
+	.others-mess-area .messBottom {
+		margin-left: 68%;
+	}
+}
+
+/* 110% */
+@media (min-width:1200px) and (max-width: 1400px) {
+	.mess-container .messenger {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.text-area .text-mess .text-input {
+		width: 700px;
+		height: 60px;
+	}
+
+	.text-area .text-btn .text-send {
+		margin-top: 10px;
+	}
+}
+
+/* 125% */
+@media (min-width:1000px) and (max-width: 1300px) {
+	.mess-container .messenger {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.text-area .text-mess .text-input {
+		width: 600px;
+		height: 60px;
+	}
+
+	.text-area .text-btn .text-send {
+		margin-top: 10px;
+	}
 }
