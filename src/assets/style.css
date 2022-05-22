@@ -116,7 +116,8 @@ a {
 	padding-bottom: 10px;	
 }
 
-.chat-room-main .chat-room-online-user {
+.chat-room-main .chat-room-online-user,
+.info-room-container .chat-room-online-user {
 	font-size: 26px;
 }
 
@@ -141,16 +142,17 @@ a {
 	height: 100%;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: center
 }
 
 .mess-container .messenger {
 	width: 80%;
 	/* min-height: 92%; */
 	height: auto;
+	margin-right: 20px;
 	box-sizing: border-box;
 	border-radius: 10px;
-	background-color: #fff;
+	background-color: rgb(202, 244, 251);
 }
 
 .mess-container .messenger .messenger-text {
@@ -227,6 +229,8 @@ a {
 	justify-content: space-around;
 	margin-right: 20px;
 	margin-top: 40px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .text-area .text-mess .text-input {
@@ -290,6 +294,10 @@ a {
 	.others-mess-area .messBottom {
 		margin-left: 68%;
 	}
+
+	.mess-container .info-room-container {
+		margin-bottom: 53% !important;
+	}
 }
 
 /* 110% */
@@ -324,4 +332,40 @@ a {
 	.text-area .text-btn .text-send {
 		margin-top: 10px;
 	}
+
+	.user-mess-area .messBottom {
+		margin-right: 72%;
+	}
+
+	.others-mess-area .messBottom {
+		margin-left: 72%;
+	}
+
+	.mess-container .info-room-container {
+		margin-bottom: 47% !important;
+	}
+}
+
+.mess-container .info-room-container {
+	margin-bottom: 38%;
+}
+
+.info-room-container .back-icon {
+	width: 16%;
+}
+
+.info-room-container .back-icon:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+.info-room-container .info-room {
+	background-color: rgb(202, 244, 251);
+	height: 120px;
+	margin: 20px;
+	border-radius: 10px;
+}
+
+.info-room-container .chat-room-name {
+	padding: 16px;
 }

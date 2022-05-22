@@ -1,6 +1,19 @@
 <template>
     <div class="mess-container" :style="{
         'background-image': `url(${require('../assets/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+        
+        <div class="info-room-container">
+            <router-link :to="{name : 'chatroom'}">
+				<img src="../assets/img/back-icon.png" alt="Exit" class="back-icon">
+			</router-link>
+    
+            <div class="info-room">
+                <h3 class="chat-room-name">Phòng chat 1</h3> 
+                <p >Online</p>
+                <p class="chat-room-online-user">5</p>
+            </div>
+        </div>
+
         <div class="messenger">
             <div class="messenger-text">
                 <div class="user-mess-area">
