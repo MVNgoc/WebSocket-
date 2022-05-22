@@ -1,6 +1,6 @@
 <template>
     <form action="#" class="join-container" :style="{
-        'background-image': `url(${require('@/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+        'background-image': `url(${require('../assets/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
 		<div class="user-information">
 			<div class="user-name-form">
 				<label class="username" for="input-username">Tên của bạn</label>

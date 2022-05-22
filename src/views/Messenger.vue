@@ -1,11 +1,11 @@
 <template>
     <div class="mess-container" :style="{
-        'background-image': `url(${require('@/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+        'background-image': `url(${require('../assets/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
         <div class="messenger">
             <div class="messenger-text">
                 <div class="user-mess-area">
                     <div class="messTop">
-                        <img src="../img/dog.png" alt="" class="messImg">
+                        <img src="../assets/img/dog.png" alt="" class="messImg">
     
                         <div class="mess-text">
                             Hí, chào cậu
@@ -18,7 +18,7 @@
     
                 <div class="user-mess-area">
                     <div class="messTop">
-                        <img src="../img/dog.png" alt="" class="messImg">
+                        <img src="../assets/img/dog.png" alt="" class="messImg">
     
                         <div class="mess-text">
                             Cậu tên gì vậy?
@@ -31,7 +31,7 @@
     
                 <div class="user-mess-area">
                     <div class="messTop">
-                        <img src="../img/dog.png" alt="" class="messImg">
+                        <img src="../assets/img/dog.png" alt="" class="messImg">
     
                         <div class="mess-text">
                             Mình tên Ngọc   
@@ -44,7 +44,7 @@
     
                 <div class="others-mess-area">
                     <div class="messTop">
-                        <img src="../img/lion.png" alt="" class="messImg">       
+                        <img src="../assets/img/lion.png" alt="" class="messImg">       
                         <div class="mess-text">
                             Chào bạn   
                         </div>
@@ -58,7 +58,7 @@
     
                 <div class="others-mess-area">
                     <div class="messTop">
-                        <img src="../img/lion.png" alt="" class="messImg">       
+                        <img src="../assets/img/lion.png" alt="" class="messImg">       
                         <div class="mess-text">
                             Mình tên Florentino :)   
                         </div>
