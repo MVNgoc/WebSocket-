@@ -14,6 +14,11 @@
         <li><img src="../assets/img/thumb2.png"></li>
         <li><img src="../assets/img/thumb3.png"></li>
     </ul>
+    <ul class= "sci">
+        <li><a href="#"><img src="../assets/img/facebook.png"></a></li>
+        <li><a href="#"><img src="../assets/img/instagram.png"></a></li>
+         <li><a href="#"><img src="../assets/img/twitter.png"></a></li>
+    </ul>
 </template>
 
 <script>
@@ -75,16 +80,48 @@
     max-width: 340px;
 }
 .thumbs {
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    width: 50%;
+    position: relative;
+    left:50%;
+    bottom:5px;
     transform: translateX(-50%);
     display: flex;
-    justify-content: space-between;
+    padding-left:35% ;
 }
-.thumbs image
+.thumbs li
 {
-    max-width: 100px;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumbs li:hover
+{
+    transform: translateY(-15px);
+}
+.thumbs li img{
+    max-width: 60px;
+}
+.sci
+{
+    position: absolute;
+    top:50%;
+    right:5px;
+    transform: translateY(-50%);
+    display: block;
+    justify-content: center;
+    margin:5px ;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
 }
 </style>
