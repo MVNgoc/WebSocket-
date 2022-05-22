@@ -9,13 +9,11 @@
             <img src="../assets/img/img1.png" class="starbucks">
         </div>
     </div>
-    <div class="'thumb">
-    <ul >
+    <ul class="thumbs">
         <li><img src="../assets/img/thumb1.png"></li>
         <li><img src="../assets/img/thumb2.png"></li>
         <li><img src="../assets/img/thumb3.png"></li>
     </ul>
-    </div>
 </template>
 
 <script>
@@ -76,16 +74,17 @@
 {
     max-width: 340px;
 }
-.thumb{
+.thumbs {
     position: absolute;
     left: 50%;
     bottom: 20px;
+    width: 50%;
     transform: translateX(-50%);
     display: flex;
+    justify-content: space-between;
 }
-.thumb image
+.thumbs image
 {
     max-width: 100px;
-    display: flex;
 }
 </style>
