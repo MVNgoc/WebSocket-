@@ -30,7 +30,7 @@ import Sidebar from './components/Sidebar'
 .dashboard {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    background-color: teal;
+    background-color: rgb(20, 23, 23);
     min-height: 100vh;
     height: auto;
     width: auto;
