@@ -1,5 +1,6 @@
 <template>  
-    <div class="content">
+    <div class="content" :style="{
+        'background-image': `url(${require('../assets/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
         <div class="textBox">
             <h2>It's not just Coffee<br>It's <span>Starbucks</span></h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -9,15 +10,10 @@
             <img src="../assets/img/img1.png" class="starbucks">
         </div>
     </div>
-    <ul class="thumbs">
-        <li><img src="../assets/img/thumb1.png"></li>
-        <li><img src="../assets/img/thumb2.png"></li>
-        <li><img src="../assets/img/thumb3.png"></li>
-    </ul>
     <ul class= "sci">
         <li><a href="#"><img src="../assets/img/facebook.png"></a></li>
         <li><a href="#"><img src="../assets/img/instagram.png"></a></li>
-         <li><a href="#"><img src="../assets/img/twitter.png"></a></li>
+        <li><a href="#"><img src="../assets/img/twitter.png"></a></li>
     </ul>
 </template>
 
@@ -78,29 +74,6 @@
 .content.imgBox img
 {
     max-width: 340px;
-}
-.thumbs {
-    position: relative;
-    left:50%;
-    bottom:5px;
-    transform: translateX(-50%);
-    display: flex;
-    padding-left:35% ;
-}
-.thumbs li
-{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.thumbs li:hover
-{
-    transform: translateY(-15px);
-}
-.thumbs li img{
-    max-width: 60px;
 }
 .sci
 {

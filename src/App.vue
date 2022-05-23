@@ -2,7 +2,7 @@
   <div id="app">
     <div class="dashboard">
         <Sidebar/>
-        <div class="content">
+        <div class="sideView">
             <router-view/>
         </div>
     </div>
@@ -36,7 +36,7 @@ import Sidebar from './components/Sidebar'
     width: auto;
     min-width: 100vw;
 }
-.content {
+.sideView {
     background-color: white;
     border-radius: 10px;
     margin: 6px 6px 6px 0px;
