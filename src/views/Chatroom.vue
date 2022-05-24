@@ -16,7 +16,7 @@
 				</header>
 				<main class="chat-room-main">
 					<p>Online</p>
-					<p class="chat-room-online-user">5</p>
+					<p class="chat-room-online-user">0</p>
 					<router-link :to="{name : 'messenger'}">
 						<button class="chat-room-btn-join">Tham gia</button>
 					</router-link>
@@ -29,7 +29,7 @@
 				</header>
 				<main class="chat-room-main">
 					<p>Online</p>
-					<p class="chat-room-online-user">5</p>
+					<p class="chat-room-online-user">0</p>
 					<router-link :to="{name : 'messenger'}">
 						<button class="chat-room-btn-join">Tham gia</button>
 					</router-link>
@@ -42,7 +42,20 @@
 				</header>
 				<main class="chat-room-main">
 					<p>Online</p>
-					<p class="chat-room-online-user">5</p>
+					<p class="chat-room-online-user">0</p>
+					<router-link :to="{name : 'messenger'}">
+						<button class="chat-room-btn-join">Tham gia</button>
+					</router-link>
+				</main>
+			</div>
+
+			<div class="chat-room">
+				<header class="chat-room-header">
+					<h3>Phòng chat 4</h3>
+				</header>
+				<main class="chat-room-main">
+					<p>Online</p>
+					<p class="chat-room-online-user">0</p>
 					<router-link :to="{name : 'messenger'}">
 						<button class="chat-room-btn-join">Tham gia</button>
 					</router-link>
