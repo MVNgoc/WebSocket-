@@ -2,7 +2,7 @@
   "name": "web-socket",
   "version": "0.1.0",
   "private": true,
-  "scripts": { 
+  "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -29,6 +29,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16",
     "sass-loader": "^12.6.0"
   },
   "eslintConfig": {

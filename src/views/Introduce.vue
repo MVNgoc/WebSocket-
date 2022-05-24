@@ -4,9 +4,8 @@
         <img src="../assets/img/stars.png" id="stars">
         <img src="../assets/img/moon.png" id="moon">
         <img src="../assets/img/mountains_behind.png" id="mountains_behind">
-        <h2 id="text">Online<span>chat</span></h2>
-        <a href="#" id="btn">Start Chat</a>
-        <a href="#" id="btn" @click="go">Let's start</a>
+        <h2 id="text" :href="goChatroom()"> Online <span>Chat</span></h2>
+        <button id="btn" @click="go">Let's start</button>
         <img src="../assets/img/mountains_front.png" id="mountains_front">
     </section>
     </div>
@@ -54,6 +53,10 @@ import anime from 'animejs';
                     duration:1000,
                     easing:'easeInOutSine'
                 });
+            },
+            goChatroom: function()
+            {
+                return 'http://localhost:8080/chatroom';
             }
         }
     };
@@ -128,6 +131,21 @@ section img#mountains_front
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 50px;
+    background: #fff;
+    border-radius:40px ;
+    font-size: 1em;
+    margin-top:80px;
+    color:#2b1055;
+    z-index: 10000;
+}
+#btnStart
+{
+    position: absolute;
+    bottom: -100%;
     transform: translate(-50%,-50%);
     text-decoration: none;
     display: inline-block;
