@@ -4,7 +4,7 @@
             <img src="../assets/img/stars.png" id="stars">
             <img src="../assets/img/moon.png" id="moon">
             <img src="../assets/img/mountains_behind.png" id="mountains_behind">
-            <h2 id="text" :href="goChatroom()"> Online <span>Chat</span></h2>
+            <h2 id="text" :href="goChatroom()">Moon <span>Chat</span></h2>
             <button id="btn" @click="go">Let's start</button>
             <img src="../assets/img/mountains_front.png" id="mountains_front">
         </section>
@@ -63,6 +63,7 @@ import anime from 'animejs';
 </script>
 
 <style scoped>
+@import '../assets/style.css';
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 .content
 {
@@ -120,6 +121,7 @@ section img#mountains_front
     font-size: 3vw;
     font-weight: 200;
     margin-right:-2000px;
+    top: 250px;
 }
 #text span
 {

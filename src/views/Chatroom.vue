@@ -1,9 +1,9 @@
 <template>
     <form action="#" class="join-container" :style="{
 		'background': 'linear-gradient(#2b1055,#7597de)','background-repeat': 'no-repeat', 'background-size': 'cover'}">
-		<section>
+		<!-- <section>
 			<img src='../assets/img/stars.png' alt="" id="stars-background">
-		</section>
+		</section> -->
 		<div class="user-information">
 			<div class="user-name-form">
 				<label class="username" for="input-username">Tên của bạn</label>

@@ -47,7 +47,7 @@ a {
 	padding: 30px;
 }
 
-.join-container #stars-background {
+/* .join-container #stars-background {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -55,7 +55,7 @@ a {
 	height: 100%;
 	background-size: cover;
 	z-index: 1;
-}
+} */
 
 .join-container .user-information {
 	display: flex;
@@ -66,7 +66,7 @@ a {
 	background-color: rgb(183, 255, 255);
 	margin-right: 20px;
 	border-radius: 10px;
-	z-index: 1000;
+	/* z-index: 1000; */
 }
 
 .user-information #btn-create-chat-room {
@@ -307,6 +307,10 @@ a {
 	.user-mess-area .mes-name {
 		right: 266px !important;
 	}
+
+	.content #text {
+		top: 227px !important;
+	}
 }
 
 /* 125% */
@@ -339,6 +343,10 @@ a {
 
 	.user-mess-area .mes-name {
 		right: 217px !important;
+	}
+
+	.content #text {
+		top: 199px !important;
 	}
 }
 
@@ -385,6 +393,10 @@ a {
 
 	.user-mess-area .mes-name {
 		right: 157px !important;
+	}
+
+	.content #text {
+		top: 166px !important;
 	}
 }
 
