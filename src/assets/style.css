@@ -156,10 +156,11 @@ a {
 }
 
 .mess-container .messenger .messenger-text {
-	max-height: 550px;
-	height: 600px;
+	height: 550px;
+	overflow-y: scroll;
 	border-bottom: 1px solid #ccc;
 	border-radius: 10px;
+	padding-bottom: 10px;
 }
 
 .messenger .others-mess-area .messTop {

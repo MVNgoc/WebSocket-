@@ -5,6 +5,7 @@
         <img src="../assets/img/moon.png" id="moon">
         <img src="../assets/img/mountains_behind.png" id="mountains_behind">
         <h2 id="text">Online<span>chat</span></h2>
+        <a href="#" id="btn">Start Chat</a>
         <a href="#" id="btn" @click="go">Let's start</a>
         <img src="../assets/img/mountains_front.png" id="mountains_front">
     </section>
