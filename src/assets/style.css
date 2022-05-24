@@ -169,6 +169,12 @@ a {
 	flex-direction: row-reverse;
 }
 
+.user-mess-area .mes-name {
+	position: relative !important;
+	top: 25px;
+	right: 317px;
+}
+
 .messenger .user-mess-area .messTop,
 .messenger .others-mess-area .messTop {
 	display: flex;
@@ -220,7 +226,7 @@ a {
 .others-mess-area .messBottom {
 	margin-left: 76%;
 	margin-top: 5px;
-}	
+}
 
 .messenger .text-area {
 	box-sizing: border-box;
@@ -260,6 +266,70 @@ a {
 	background-color: rgb(62, 117, 188);
 }
 
+/* 110% */
+@media (min-width:1200px) and (max-width: 1400px) {
+	.mess-container .messenger {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.text-area .text-mess .text-input {
+		width: 700px;
+		height: 60px;
+	}
+
+	.text-area .text-btn .text-send {
+		margin-top: 10px;
+	}
+
+	.info-room-container .users-online {
+		height: 470px !important;
+	}
+
+	.user-mess-area .mes-name {
+		position: relative !important;
+		top: 25px;
+		right: 317px;
+	}
+
+	.user-mess-area .mes-name {
+		right: 266px !important;
+	}
+}
+
+/* 125% */
+@media (min-width:1000px) and (max-width: 1300px) {
+	.mess-container .messenger {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	
+	.text-area .text-mess .text-input {
+		width: 600px;
+		height: 60px;
+	}
+
+	.text-area .text-btn .text-send {
+		margin-top: 10px;
+	}
+
+	.user-mess-area .messBottom {
+		margin-right: 72%;
+	}
+
+	.others-mess-area .messBottom {
+		margin-left: 72%;
+	}
+
+	.info-room-container .users-online {
+		height: 474px !important;
+	}
+
+	.user-mess-area .mes-name {
+		right: 217px !important;
+	}
+}
+
 /* 150% */
 @media (min-width: 900px) and (max-width: 1000px) {
 	.mess-container .messenger {
@@ -297,59 +367,13 @@ a {
 		margin-left: 68%;
 	}
 
-	.mess-container .info-room-container {
-		margin-bottom: 53% !important;
-	}
-}
-
-/* 110% */
-@media (min-width:1200px) and (max-width: 1400px) {
-	.mess-container .messenger {
-		margin-top: 20px;
-		margin-bottom: 20px;
+	.info-room-container .users-online {
+		height: 450px !important;
 	}
 
-	.text-area .text-mess .text-input {
-		width: 700px;
-		height: 60px;
+	.user-mess-area .mes-name {
+		right: 157px !important;
 	}
-
-	.text-area .text-btn .text-send {
-		margin-top: 10px;
-	}
-}
-
-/* 125% */
-@media (min-width:1000px) and (max-width: 1300px) {
-	.mess-container .messenger {
-		margin-top: 20px;
-		margin-bottom: 20px;
-	}
-	
-	.text-area .text-mess .text-input {
-		width: 600px;
-		height: 60px;
-	}
-
-	.text-area .text-btn .text-send {
-		margin-top: 10px;
-	}
-
-	.user-mess-area .messBottom {
-		margin-right: 72%;
-	}
-
-	.others-mess-area .messBottom {
-		margin-left: 72%;
-	}
-
-	.mess-container .info-room-container {
-		margin-bottom: 47% !important;
-	}
-}
-
-.mess-container .info-room-container {
-	margin-bottom: 38%;
 }
 
 .info-room-container .back-icon {
@@ -370,4 +394,28 @@ a {
 
 .info-room-container .chat-room-name {
 	padding: 16px;
+}
+
+.info-room-container .users-online {
+	background-color: rgb(202, 244, 251);
+	height: 485px;
+	margin: 20px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.users-online .messImg {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+
+.users-online .user-online {
+	display: flex;
+	justify-content: space-around;
+	height:auto;
+	align-items: center;
+	margin-bottom: 12px;
 }

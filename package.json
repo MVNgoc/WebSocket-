@@ -2,7 +2,7 @@
   "name": "web-socket",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
+  "scripts": { 
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -10,9 +10,13 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.1.1",
     "core-js": "^3.8.3",
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
     "mongodb": "^4.6.0",
     "mongoose": "^6.3.4",
+    "socket.io": "^4.5.1",
     "vue": "^3.2.13",
+    "vue-3-socket.io": "^1.0.5",
     "vue-animejs": "^2.1.1",
     "vue-router": "^4.0.13"
   },

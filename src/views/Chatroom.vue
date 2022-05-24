@@ -4,7 +4,7 @@
 		<div class="user-information">
 			<div class="user-name-form">
 				<label class="username" for="input-username">Tên của bạn</label>
-				<input type="text" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username">
+				<input type="text" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" v-model="currentUser">
 				<button type="submit" id="btn-create-chat-room">Tạo phòng</button>
 			</div>
 		</div>
@@ -18,7 +18,7 @@
 					<p>Online</p>
 					<p class="chat-room-online-user">0</p>
 					<router-link :to="{name : 'messenger'}">
-						<button class="chat-room-btn-join">Tham gia</button>
+						<button class="chat-room-btn-join" v-on:click="join">Tham gia</button>
 					</router-link>
 				</main>
 			</div>
@@ -67,7 +67,24 @@
 
 <script>
     export default {
-        name:'Chatroom-view'
+        name:'Chatroom-view',
+		data() {
+			return {
+				userName: false,
+				joined: false,
+				currentUser: "",
+			}
+		},
+		methods: {
+			join() {
+				if(this.currentUser == "") {
+					alert("Bạn chưa nhập tên!");
+					return;
+				}
+				console.log(this.currentUser);
+				this.joined = true;
+			}
+		}
     }
 </script>
 

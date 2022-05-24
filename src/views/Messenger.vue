@@ -12,11 +12,26 @@
                 <p >Online</p>
                 <p class="chat-room-online-user">5</p>
             </div>
+
+            <div class="users-online">
+                <div class="user-online">
+                    <img src="../assets/img/dog.png" alt="" class="messImg">
+                    <div class="user-name">Nguyễn Văn A</div>
+                </div>
+
+                <div class="user-online">
+                    <img src="../assets/img/lion.png" alt="" class="messImg">
+                    <div class="user-name">Nguyễn Văn A</div>
+                </div>
+            </div>
         </div>
 
         <div class="messenger">
             <div class="messenger-text">
                 <div class="user-mess-area">
+                    <div class="mes-name">
+                        Nguyễn Văn A
+                    </div>
                     <div class="messTop">
                         <img src="../assets/img/dog.png" alt="" class="messImg">
     
@@ -30,6 +45,9 @@
                 </div>
     
                 <div class="user-mess-area">
+                    <div class="mes-name">
+                        Nguyễn Văn A
+                    </div>
                     <div class="messTop">
                         <img src="../assets/img/dog.png" alt="" class="messImg">
     
@@ -43,6 +61,9 @@
                 </div>
     
                 <div class="user-mess-area">
+                    <div class="mes-name">
+                        Nguyễn Văn A
+                    </div>
                     <div class="messTop">
                         <img src="../assets/img/dog.png" alt="" class="messImg">
     
@@ -100,6 +121,9 @@
                 </div>
 
                 <div class="user-mess-area">
+                    <div class="mes-name">
+                        Nguyễn Văn A
+                    </div>
                     <div class="messTop">
                         <img src="../assets/img/dog.png" alt="" class="messImg">
     
