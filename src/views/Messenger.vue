@@ -1,6 +1,6 @@
 <template>
     <div class="mess-container" :style="{
-        'background-image': `url(${require('../assets/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+        'background': 'linear-gradient(#2b1055,#7597de)'}">
         
         <div class="info-room-container">
             <router-link :to="{name : 'chatroom'}">
@@ -12,7 +12,7 @@
                 <p >Online</p>
                 <p class="chat-room-online-user">5</p>
             </div>
-
+    
             <div class="users-online">
                 <div class="user-online">
                     <img src="../assets/img/dog.png" alt="" class="messImg">
