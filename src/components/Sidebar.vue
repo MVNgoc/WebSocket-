@@ -25,6 +25,10 @@ export default {
 </script>
 
 <style scoped>
+.sidebar {
+    z-index: 1000 !important;
+}
+
 .title {
     color: white;
     font-size: 24px;
@@ -56,7 +60,7 @@ export default {
     outline: none;
 }
 
-.side-btn.active {
+.side-btn .active {
     position: relative;
     background-color: white;
     color: rgb(1, 1, 1);

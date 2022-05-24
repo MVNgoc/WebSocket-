@@ -1,6 +1,9 @@
 <template>
     <form action="#" class="join-container" :style="{
-        'background-image': `url(${require('../assets/img/introduce_background.png')})`, 'background-repeat': 'no-repeat', 'background-size': 'cover'}">
+		'background': 'linear-gradient(#2b1055,#7597de)','background-repeat': 'no-repeat', 'background-size': 'cover'}">
+		<section>
+			<img src='../assets/img/stars.png' alt="" id="stars-background">
+		</section>
 		<div class="user-information">
 			<div class="user-name-form">
 				<label class="username" for="input-username">Tên của bạn</label>
@@ -89,5 +92,5 @@
 </script>
 
 <style scoped>
-@import '../assets/style.css'
+@import '../assets/style.css';
 </style>

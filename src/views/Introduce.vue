@@ -1,13 +1,13 @@
 <template>  
     <div class="content">
         <section>
-        <img src="../assets/img/stars.png" id="stars">
-        <img src="../assets/img/moon.png" id="moon">
-        <img src="../assets/img/mountains_behind.png" id="mountains_behind">
-        <h2 id="text" :href="goChatroom()"> Online <span>Chat</span></h2>
-        <button id="btn" @click="go">Let's start</button>
-        <img src="../assets/img/mountains_front.png" id="mountains_front">
-    </section>
+            <img src="../assets/img/stars.png" id="stars">
+            <img src="../assets/img/moon.png" id="moon">
+            <img src="../assets/img/mountains_behind.png" id="mountains_behind">
+            <h2 id="text" :href="goChatroom()"> Online <span>Chat</span></h2>
+            <button id="btn" @click="go">Let's start</button>
+            <img src="../assets/img/mountains_front.png" id="mountains_front">
+        </section>
     </div>
 </template>
 
@@ -126,22 +126,53 @@ section img#mountains_front
     font-weight: 700;
 
 }
-#btn
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+
+#btn {
+    align-items: center;
+    appearance: none;
+    background-image: linear-gradient(to bottom ,#7888f5,#7e8ffc,#cfd4fb);
+    border-radius: 12px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
     text-decoration: none;
-    display: inline-block;
-    padding: 8px 50px;
-    background: #fff;
-    border-radius:40px ;
-    font-size: 1em;
-    margin-top:80px;
-    color:#2b1055;
-    z-index: 10000;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
 }
+
+#btn:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+#btn:hover {
+    opacity: 0.8;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+#btn:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+}
+
 #btnStart
 {
     position: absolute;

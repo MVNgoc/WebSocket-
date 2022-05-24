@@ -47,6 +47,16 @@ a {
 	padding: 30px;
 }
 
+.join-container #stars-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: 1;
+}
+
 .join-container .user-information {
 	display: flex;
 	justify-content: center;
@@ -56,6 +66,7 @@ a {
 	background-color: rgb(183, 255, 255);
 	margin-right: 20px;
 	border-radius: 10px;
+	z-index: 1000;
 }
 
 .user-information #btn-create-chat-room {
@@ -95,7 +106,8 @@ a {
 	width: 30%;
 	height: 480px;
 	background-color: rgb(183, 255, 255);
-	border-radius: 10px;	
+	border-radius: 10px;
+	z-index: 1000;
 }
 
 .chat-rooms .chat-room {
