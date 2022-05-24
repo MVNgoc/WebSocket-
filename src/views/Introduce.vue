@@ -4,7 +4,12 @@
             <img src="../assets/img/stars.png" id="stars">
             <img src="../assets/img/moon.png" id="moon">
             <img src="../assets/img/mountains_behind.png" id="mountains_behind">
-            <h2 id="text" :href="goChatroom()">Moon <span>Chat</span></h2>
+            <img src="../assets/img/CatmoonLogoBlack.png" id="moon_cat">
+            <h2 id="text" :href="goChatroom()">Moon 
+            <router-link :to="{name : 'chatroom'}" active-class="active" class="side-btn">
+                <span style="color:white">Chat</span>
+            </router-link>
+            </h2>
             <button id="btn" @click="go">Let's start</button>
             <img src="../assets/img/mountains_front.png" id="mountains_front">
         </section>
@@ -38,6 +43,12 @@ import anime from 'animejs';
                 anime({                                      // <-- using imported
                     targets: '#moon',
                     top:'0px',
+                    duration:1000,
+                    easing:'easeInOutSine'
+                });
+                anime({                                      // <-- using imported
+                    targets: '#moon_cat',
+                    top:'11.8%',
                     duration:1000,
                     easing:'easeInOutSine'
                 });
@@ -97,6 +108,15 @@ section img#moon
     mix-blend-mode: screen;
     top:-100%;
 }
+
+section img#moon_cat
+{
+    width: 8%;
+    position: absolute;
+    left: 46%;
+    top:-100%;
+}
+
 section img#stars
 {
     top:-100%;

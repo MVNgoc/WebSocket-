@@ -1,7 +1,8 @@
 <template>
     <div class="sidebar">
+        <img src="../assets/img/CatmoonLogoWhite.png" alt="" id="moon_cat_white">
         <div class="title">
-            Online Chat
+            Moon Chat
         </div>
         <div class="menu-items">
             <router-link :to="{name : 'dashboard'}" active-class="active" class="side-btn">
@@ -88,5 +89,10 @@ export default {
     width: 60px;
     border-radius: 50%;
     background-color: rgb(1, 1, 1);
+}
+
+.sidebar #moon_cat_white {
+    margin-top: 6%;
+    width: 28%;
 }
 </style>
