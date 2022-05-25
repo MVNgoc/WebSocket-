@@ -96,6 +96,7 @@ import { onMounted,ref } from '@vue/runtime-core';
 		},
     
 		setup(){
+			const users = ref ([])
 			onMounted(() => {
 				socket.on("getUsers",(data) => {
 					data.forEach( user => {
