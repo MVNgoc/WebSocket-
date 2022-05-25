@@ -143,7 +143,6 @@ section img#mountains_front
 #text span
 {
     font-weight: 700;
-
 }
 
 #btn {
@@ -190,21 +189,5 @@ section img#mountains_front
 #btn:active {
     box-shadow: #D6D6E7 0 3px 7px inset;
     transform: translateY(2px);
-}
-
-#btnStart
-{
-    position: absolute;
-    bottom: -100%;
-    transform: translate(-50%,-50%);
-    text-decoration: none;
-    display: inline-block;
-    padding: 8px 50px;
-    background: #fff;
-    border-radius:40px ;
-    font-size: 1em;
-    margin-top:80px;
-    color:#2b1055;
-    z-index: 10000;
 }
 </style>
