@@ -1,12 +1,12 @@
 <template>
-    <form action="#" class="join-container" :style="{
+    <div class="join-container" :style="{
 		'background': 'linear-gradient(#2b1055,#7597de)'}">
 		<div class="user-information">
-			<div class="user-name-form">
+			<form class="user-name-form">
 				<label class="username" for="input-username">Tên của bạn</label>
-				<input type="text" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" v-model="currentUser">
+				<input type="text" v-model="currentUser" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
 				<button type="submit" id="btn-create-chat-room">Tạo phòng</button>
-			</div>
+			</form>
 		</div>
 
 		<div class="chat-rooms"> 
@@ -17,12 +17,11 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">0</p>
-					<router-link :to="{name : 'messenger'}">
-						<button class="chat-room-btn-join" v-on:click="join">Tham gia</button>
-					</router-link>
+					<form @submit.prevent="onConnection">
+						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
+					</form>
 				</main>
 			</div>
-
 			<div class="chat-room">
 				<header class="chat-room-header">
 					<h3>Phòng chat 2</h3>
@@ -30,9 +29,9 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">0</p>
-					<router-link :to="{name : 'messenger'}">
-						<button class="chat-room-btn-join">Tham gia</button>
-					</router-link>
+					<form @submit.prevent="onConnection">
+						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
+					</form>
 				</main>
 			</div>
 
@@ -43,9 +42,9 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">0</p>
-					<router-link :to="{name : 'messenger'}">
-						<button class="chat-room-btn-join">Tham gia</button>
-					</router-link>
+					<form @submit.prevent="onConnection">
+						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
+					</form>
 				</main>
 			</div>
 
@@ -56,16 +55,17 @@
 				<main class="chat-room-main">
 					<p>Online</p>
 					<p class="chat-room-online-user">0</p>
-					<router-link :to="{name : 'messenger'}">
-						<button class="chat-room-btn-join">Tham gia</button>
-					</router-link>
+					<form @submit.prevent="onConnection">
+						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
+					</form>
 				</main>
 			</div>
 		</div>
-	</form>
+	</div>
 </template>
 
 <script>
+import socket from "@/plugins/socket"
     export default {
         name:'Chatroom-view',
 		data() {
@@ -81,8 +81,13 @@
 					alert("Bạn chưa nhập tên!");
 					return;
 				}
+				else{
+					this.joined = true;
+				}
 				console.log(this.currentUser);
-				this.joined = true;
+			},
+			onConnection : function(){
+				socket.connect();
 			}
 		}
     }
