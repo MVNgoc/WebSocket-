@@ -23,7 +23,7 @@ io.use((socket,next) => {
 io.on("connection",(socket,next) => {
     console.log("a user connected");
 
-    const users = []
+    const users = [];
     
     for (let [id,socket] of io.of("/").sockets) {
         users.push({
@@ -33,6 +33,11 @@ io.on("connection",(socket,next) => {
     }
     
     socket.emit("getUsers",users)
+
+    socket.broadcast.emit("userJustConnected",{
+        userId: socket.id,
+        userName: socket.userName
+    })
 
     socket.on("disconnect",() =>{
         console.log("a user disconnected");
