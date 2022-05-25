@@ -51,12 +51,12 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 70%;
-	height: 95%;
+	width: 822px;
+	height: 652px;
 	background-image: linear-gradient(to bottom, #005AA7, #b4b3b0);
 	margin-right: 20px;
 	border-radius: 10px;
-	/* z-index: 1000; */
+	animation: modalFadeDown ease .8s;
 }
 
 .user-information #btn-create-chat-room {
@@ -131,10 +131,11 @@ a {
 .join-container .chat-rooms {
 	overflow-y: scroll;
 	width: 30%;
-	height: 480px;
+	height: 500px;
 	background-image: linear-gradient(to top, #005AA7, #b4b3b0);
 	border-radius: 10px;
 	z-index: 1000;
+	animation: modalFadeUp ease .8s;
 }
 
 .chat-rooms .chat-room {
@@ -601,4 +602,27 @@ a {
 	height:auto;
 	align-items: center;
 	margin-bottom: 12px;
+}
+
+/* Animation */
+@keyframes modalFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-200px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes modalFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(200px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
 }
