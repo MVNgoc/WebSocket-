@@ -92,6 +92,12 @@ a {
 	font-size: 20px;
 }
 
+.join-container .user-name-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .user-information #input-username {
 	border-radius: 10px;
 	border: 0;
@@ -99,6 +105,7 @@ a {
 	height: 40px;
 	padding: 10px;
 	font-size: 16px;
+	margin-top: 15px;
 }
 
 .join-container .chat-rooms {
@@ -240,7 +247,7 @@ a {
 .others-mess-area .messBottom {
 	margin-left: 76%;
 	margin-top: 5px;
-	
+	color: var(--light-color);
 }
 
 .messenger .text-area {
@@ -402,6 +409,52 @@ a {
 		top: 166px !important;
 	}
 }
+
+/* 200% */
+@media (min-width: 700px) and (max-width: 800px) {
+	.join-container	.user-name-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.join-container #input-username {
+		margin-top: 10px;
+		font-size: 12px;
+	}
+}
+
+/* > 250% */
+@media (max-width: 600px) {
+	.join-container .username {
+		font-size: 16px;
+	}
+
+	.join-container #input-username {
+		width: 100%;
+		height: 30px;
+		margin-top: 10px;
+		font-size: 12px;
+	}
+
+	.join-container	.user-name-form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.join-container	#btn-create-chat-room {
+		width: 100px;
+		height: 40px;
+	}
+
+	.chat-room-main .chat-room-btn-join {
+		width: 80px;
+		height: 30px;
+		margin-top: 8px;
+	}	
+}
+
 
 .info-room-container .back-icon {
 	width: 16%;
