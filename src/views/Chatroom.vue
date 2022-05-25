@@ -88,11 +88,19 @@ import { onMounted , ref } from '@vue/runtime-core';
 				console.log(this.currentUser);
 			},
 			onConnection : function(){
-				this.joined = true;
 				socket.auth = {
 					userName : this.userName
 				}
-				socket.connect();
+
+				if(socket.auth.userName == "") {
+					alert("Bạn chưa nhập tên!");
+					return;
+				}
+				else
+				{
+					this.joined = true;
+					socket.connect();
+				}
 			}
 		},
     
