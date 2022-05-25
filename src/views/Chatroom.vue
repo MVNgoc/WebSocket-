@@ -71,11 +71,7 @@ import { onMounted,ref } from '@vue/runtime-core';
         name:'Chatroom-view',
 		data() {
 			return {
-<<<<<<< HEAD
 				userName: "",
-=======
-				userName: '',
->>>>>>> 56f08074c6127ea41d5128cfd61cd7393240b9f3
 				joined: false,
 			}
 		},
