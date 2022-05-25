@@ -226,6 +226,7 @@ a {
 	box-sizing: border-box;
 	border-radius: 10px;
 	background-image: linear-gradient(to top, #0f0c29, #302b63, #24243e);
+	animation: modalFadeLeft ease .8s;
 }
 
 .mess-container .messenger .messenger-text {
@@ -572,6 +573,10 @@ a {
 	}
 }
 
+.info-room-container {
+	animation: modalFadeRight ease .8s;
+}
+
 .info-room-container .back-icon {
 	width: 16%;
 }
@@ -636,5 +641,27 @@ a {
     to {
         opacity: 1;
         transform: translateY(0)
+    }
+}
+
+@keyframes modalFadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(200px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes modalFadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0)
     }
 }
