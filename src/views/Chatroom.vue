@@ -72,13 +72,15 @@ import socket from "@/plugins/socket"
 		data() {
 			return {
 				userName: "",
+				userRoom: "",
 				joined: false,
 			}
 		},
 		methods: {
 			onConnection : function(){
 				socket.auth = {
-					userName : this.userName
+					userName : this.userName,
+					userRoom : "1",
 				}
 
 				if(socket.auth.userName == "") {
