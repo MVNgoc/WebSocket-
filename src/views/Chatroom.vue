@@ -2,14 +2,14 @@
     <div class="join-container" :style="{
 		'background': 'linear-gradient(#2b1055,#7597de)'}">
 		<div class="user-information">
-			<form class="user-name-form" @submit.prevent="onConnection">
+			<form class="user-name-form" @submit.prevent="onConnection" v-if="!joined">
 				<label class="username" for="input-username">Tên của bạn</label>
 				<input type="text" v-model="userName" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
-				<button type="submit" id="btn-create-chat-room">Tạo phòng</button>
+				<button type="submit" id="btn-create-chat-room">Kết Nối</button>
 			</form>
 		</div>
 
-		<div class="chat-rooms">
+		<div class="chat-rooms" v-if="joined">
 			<div  v-for="user in users" :key="user.userId" class="chat-room">
 				<header class="chat-room-header">
 					<h3>{{user.userName}}</h3>
