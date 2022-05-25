@@ -3,9 +3,9 @@
         <section>
             <img src="../assets/img/stars.png" id="stars">
             <img src="../assets/img/moon.png" id="moon">
-            <img src="../assets/img/mountains_behind.png" id="mountains_behind">
             <img src="../assets/img/CatmoonLogoBlack.png" id="moon_cat">
-            <h2 id="text" :href="goChatroom()">Moon 
+            <img src="../assets/img/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon 
             <router-link :to="{name : 'chatroom'}" active-class="active" class="side-btn">
                 <span style="color:white">Chat</span>
             </router-link>
@@ -34,7 +34,7 @@ import anime from 'animejs';
                     duration:1000,
                     easing:'easeInOutSine'
                 });
-                anime({                                      // <-- using imported
+                anime({                                 // <-- using imported
                     targets: '#mountains_behind',
                     bottom:'0px',
                     duration:1000,
@@ -51,7 +51,6 @@ import anime from 'animejs';
                     top:'11.8%',
                     duration:1000,
                     easing:'easeInOutSine'
-                    
                 });
                 anime({                                      // <-- using imported
                     targets: '#mountains_front',
@@ -65,10 +64,6 @@ import anime from 'animejs';
                     duration:1000,
                     easing:'easeInOutSine'
                 });
-            },
-            goChatroom: function()
-            {
-                return 'http://localhost:8080/chatroom';
             }
         }
     };
@@ -86,6 +81,7 @@ import anime from 'animejs';
     align-items: center;
     background: linear-gradient(#2b1055,#7597de);
 }
+
 section
 {
     position: relative;
@@ -115,7 +111,7 @@ section img#moon_cat
     width: 8%;
     position: absolute;
     left: 46%;
-    top:-100%;
+    top:-30%;
 }
 
 section img#stars
