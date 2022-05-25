@@ -51,6 +51,7 @@ import anime from 'animejs';
                     top:'11.8%',
                     duration:1000,
                     easing:'easeInOutSine'
+                    
                 });
                 anime({                                      // <-- using imported
                     targets: '#mountains_front',
