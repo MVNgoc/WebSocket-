@@ -95,4 +95,4 @@ import socket from "@/plugins/socket"
 
 <style scoped>
 @import '../assets/style.css';
-</style>
+</style>``

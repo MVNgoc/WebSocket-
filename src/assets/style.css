@@ -555,6 +555,7 @@ a {
 	.chat-room-main .chat-room-btn-join {
 		width: 50px;
 		height: 40px;
+		font-size: 10px;
 	}
 }
 
