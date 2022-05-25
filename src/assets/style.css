@@ -229,7 +229,7 @@ a {
 }
 
 .join-container .messenger .messenger-text {
-	height: 400px;
+	height: 100%;
 	width: 100%;
 	overflow-y: scroll;
 	border-bottom: 1px solid #ccc;
@@ -312,7 +312,7 @@ a {
 	margin-bottom: 20px;
 	justify-content: space-around;
 	margin-right: 20px;
-	margin-top: 40px;
+	margin-top: 30px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
@@ -411,6 +411,15 @@ a {
 	.join-container .chat-rooms {
 		height: 470px;
 	}
+
+	.join-container .messenger .text-area .text-input {
+		width: 500px;
+		height: auto;
+	}
+
+	.join-container .messenger .text-area {
+		margin-top: 20px;
+	}
 }
 
 /* 125% */
@@ -451,6 +460,43 @@ a {
 
 	.join-container .chat-rooms {
 		height: 420px;
+	}
+
+	.join-container .messenger .messenger-text {
+		height: 100%;
+		width: 90%;
+		overflow-y: scroll;
+		border-bottom: 1px solid #ccc;
+		border-radius: 10px;
+		margin-left: 6%;
+	}
+	
+	.join-container .messenger .text-area {
+		width: 100%;
+		height: auto;
+		display: flex;
+		margin-bottom: 20px;
+		justify-content: space-around;
+		margin-right: 20px;
+		margin-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.text-area .text-mess .text-input {
+		width: 400px;
+		height: 50px;
+		font-size: 14px;
+	}
+
+	.text-area .text-btn .text-send {
+		width: 80px;
+		height: 30px;
+		font-size: 14px;			
+	}
+
+	.join-container .user-information {
+		height: 100%;
 	}
 }
 
@@ -505,6 +551,43 @@ a {
 
 	.join-container .chat-rooms {
 		height: 350px;
+	}
+
+	.join-container .messenger .messenger-text {
+		height: 85%;
+		width: 90%;
+		overflow-y: scroll;
+		border-bottom: 1px solid #ccc;
+		border-radius: 10px;
+		margin-left: 6%;
+	}
+	
+	.join-container .messenger .text-area {
+		width: 100%;
+		height: auto;
+		display: flex;
+		margin-bottom: 20px;
+		justify-content: space-around;
+		margin-right: 20px;
+		margin-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	.text-area .text-mess .text-input {
+		width: 400px;
+		height: 50px;
+		font-size: 14px;
+	}
+
+	.text-area .text-btn .text-send {
+		width: 80px;
+		height: 30px;
+		font-size: 14px;			
+	}
+
+	.join-container .user-information {
+		height: 100%;
 	}
 }
 
