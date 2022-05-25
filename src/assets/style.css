@@ -615,8 +615,8 @@ a {
 
 .users-online .user-online {
 	display: flex;
-	justify-content: space-around;
 	height:auto;
+	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 12px;
 }

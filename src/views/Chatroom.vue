@@ -9,7 +9,7 @@
 			</form>
 		</div>
 
-		<div class="chat-rooms"> 
+		<div class="chat-rooms">
 			<div class="chat-room">
 				<header class="chat-room-header">
 					<h3>Phòng chat 1</h3>
@@ -66,7 +66,6 @@
 
 <script>
 import socket from "@/plugins/socket"
-
     export default 
 	{
         name:'Chatroom-view',
@@ -93,7 +92,7 @@ import socket from "@/plugins/socket"
 					this.$router.push('/messenger');
 				}
 			},
-		},
+		},	
 	}
 </script>
 

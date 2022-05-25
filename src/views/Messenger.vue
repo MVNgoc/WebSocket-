@@ -10,13 +10,13 @@
             <div class="info-room">
                 <h3 class="chat-room-name">Phòng chat 1</h3> 
                 <p >Online</p>
-                <p class="chat-room-online-user">5</p>
+                <p class="chat-room-online-user">{{users.length}}</p>
             </div>
-            
+    
             <div class="users-online">
-                <div class="user-online">
+                <div v-for="user in users" :key="user.userId" class="user-online">
                     <img src="../assets/img/dog.png" alt="" class="messImg">
-                    <div class="user-name">Trần Văn A</div>
+                    <div class="user-name">{{user.userName}}</div>
                 </div>
             </div>
         </div>
@@ -78,8 +78,6 @@
                             Chào bạn   
                         </div>
                     </div>
-    
-    
                     <div class="messBottom">
                         9:51
                     </div>
@@ -152,7 +150,7 @@ import { onMounted , ref } from '@vue/runtime-core';
 export default {
     name: 'Messenger-view',
     setup(){
-			const users = ref ([]);
+            const users = ref([]);
 			onMounted(() => {
 				socket.on("getUsers",(data) => {
 					data.forEach( user => {
@@ -160,7 +158,7 @@ export default {
 					})
 					
 					// sort
-					users.value = data.sort((a,b) => {
+				users.value = data.sort((a,b) => {
 						if (a.self) return -1;
 						if (b.self) return 1;
 						if (a.userName < b.userName) return -1;
@@ -174,6 +172,7 @@ export default {
 					console.log("user just connected:", users.value)
 				})
 			})
+            return { users };
 		}
 }
 </script>
