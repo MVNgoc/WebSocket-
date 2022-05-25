@@ -71,9 +71,8 @@ import { onMounted } from '@vue/runtime-core';
         name:'Chatroom-view',
 		data() {
 			return {
-				userName: false,
+				userName: '',
 				joined: false,
-				currentUser: "",
 			}
 		},
 		methods: {
@@ -97,7 +96,7 @@ import { onMounted } from '@vue/runtime-core';
 		},
     
 		setup(){
-			onMounted(() =>{
+			onMounted(() => {
 				socket.on("getUsers",(data) => {
 					return console.log("get users",data)
 				})

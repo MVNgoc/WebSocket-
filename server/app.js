@@ -20,7 +20,7 @@ io.use((socket,next) => {
     next();
 })
 
-io.on("connection",(socket,next) =>{
+io.on("connection",(socket,next) => {
     console.log("a user connected");
 
     const users = []
