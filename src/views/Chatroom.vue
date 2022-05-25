@@ -7,7 +7,7 @@
 				<input type="text" v-model="userName" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
 				<button type="submit" id="btn-create-chat-room">Kết Nối</button>
 			</form>
-			<div class="messenger">
+			<div class="messenger" v-if="isChoose">
 				<div class="messenger-text">
 					<div class="user-mess-area">
 						<div class="messTop">
@@ -47,7 +47,7 @@
 						<h3>{{user.userName}}</h3>
 					</header>
 					<main class="chat-room-main">
-						<button @click="onSelectedUserToSend(user)" class="chat-room-btn-join">Nhắn tin</button>
+						<button v-on:@click="onSelectedUserToSend(user)" class="chat-room-btn-join">Nhắn tin</button>
 					</main>
 				</div>
 			</div>
@@ -55,52 +55,46 @@
 	</div>
 </template>
 
-<script>
+<script setup>
 import socket from "@/plugins/socket"
 import { onMounted , ref } from '@vue/runtime-core';
-    export default 
-	{
-        name:'Chatroom-view',
-		data() {
-			return {
-				userName: "",
-				joined: false,
-				isChoose: false,
-				selectedUserToSend: "",
-				message:""
-			}
-		},
-		methods: {
-			onConnection : function(){
-				socket.auth = {
-					userName : this.userName,
-				}
 
-				if(socket.auth.userName == "") {
-					alert("Bạn chưa nhập tên!");
-					return;
-				}
-				else
-				{
-					this.joined = true;
-					socket.connect();
+const userName = ref("")
+const joined = ref(false)
+const isChoose = ref(false)
+const users = ref([])
+const selectedUserToSend= ref()
+const message = ref();
+
+function onConnection(){
+	socket.auth = {
+		userName:userName.value
+	}
+	if(socket.auth.userName == "") {
+		alert("Bạn chưa nhập tên!");
+			return;
+		}
+		else
+		{
+			joined.value = true;
+			socket.connect();
 					//this.$router.push('/messenger');
-				}
-			},
-			onSelectedUserToSend : function(user){
-				this.isChoose = true;
-				selectedUserToSend.value = user;
-			},
-			onSendMessage : function(){
-				socket.emit("privateMessage"),{
-					message : this.message,
-					to : this.selectedUserToSend.userId
-				}
-			}
-		},	
-		setup(){
-            const users = ref([])
-			onMounted(() => {
+		}
+}
+
+
+function onSelectedUserToSend(user){
+	isChoose.value = true;
+	selectedUserToSend.value = user;
+}
+function onSendMessage(){
+	socket.emit("privateMessage"),{
+		message : message.value,
+		to : this.selectedUserToSend.value.userId
+	}
+}
+
+onMounted(() => {
 				socket.on("getUsers",(data) => {
 					data.forEach( user => {
 						user.self = user.userId === socket.id					
@@ -120,10 +114,7 @@ import { onMounted , ref } from '@vue/runtime-core';
 					users.value.push(data)
 					console.log("user just connected:", users.value)
 				})
-			})
-            return { users };
-		}
-	}
+	})
 </script>
 
 <style scoped>
