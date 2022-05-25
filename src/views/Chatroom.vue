@@ -7,20 +7,51 @@
 				<input type="text" v-model="userName" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
 				<button type="submit" id="btn-create-chat-room">Kết Nối</button>
 			</form>
+			<div class="messenger" v-if="isChoose">
+				<div class="messenger-text">
+					<div class="user-mess-area">
+						<div class="messTop">
+							<img src="../assets/img/dog.png" alt="" class="messImg">
+		
+							<div class="mess-text">
+								Hí, chào cậu
+							</div>
+						</div>
+					</div>
+		
+					<div class="others-mess-area">
+						<div class="messTop">
+							<img src="../assets/img/lion.png" alt="" class="messImg">       
+							<div class="mess-text">
+								Chào bạn   
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<form class="text-area">
+					<div class="text-mess">
+						<textarea maxlength="10000" class="text-input" placeholder="Nhập tin nhắn...." required></textarea>
+					</div>
+					<div class="text-btn">
+						<button class="text-send">Gửi</button>
+					</div>
+				</form>
+			</div>
 		</div>
 
 		<div class="chat-rooms" v-if="joined">
 			<div  v-for="user in users" :key="user.userId" class="chat-room">
-				<header class="chat-room-header">
-					<h3>{{user.userName}}</h3>
-				</header>
-				<main class="chat-room-main">
-					<p>Online</p>
-					<p class="chat-room-online-user">0</p>
-					<form @submit.prevent="onConnection">
-						<button type="submit" class="chat-room-btn-join">Tham gia</button>
-					</form>
-				</main>
+				<div v-if="!user.self">			
+					<header class="chat-room-header">
+						<h3>{{user.userName}}</h3>
+					</header>
+					<main class="chat-room-main">
+						<form @submit.prevent="onConnection">
+							<button type="submit" class="chat-room-btn-join">Nhắn tin</button>
+						</form>
+					</main>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -37,6 +68,7 @@ import { onMounted , ref } from '@vue/runtime-core';
 				userName: "",
 				userRoom: "",
 				joined: false,
+				isChoose: false
 			}
 		},
 		methods: {

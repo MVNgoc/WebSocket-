@@ -218,19 +218,19 @@ a {
 	align-items: center
 }
 
-.mess-container .messenger {
-	width: 80%;
+.join-container .messenger {
+	width: 700px;
 	/* min-height: 92%; */
-	height: auto;
+	height: 400px;
 	margin-right: 20px;
 	box-sizing: border-box;
 	border-radius: 10px;
-	background-image: linear-gradient(to top, #0f0c29, #302b63, #24243e);
 	animation: modalFadeLeft ease .8s;
 }
 
-.mess-container .messenger .messenger-text {
-	height: 550px;
+.join-container .messenger .messenger-text {
+	height: 400px;
+	width: 100%;
 	overflow-y: scroll;
 	border-bottom: 1px solid #ccc;
 	border-radius: 10px;
@@ -304,7 +304,7 @@ a {
 	color: var(--light-color);
 }
 
-.messenger .text-area {
+.join-container .messenger .text-area {
 	box-sizing: border-box;
 	width: 100%;
 	height: auto;
@@ -318,7 +318,7 @@ a {
 }
 
 .text-area .text-mess .text-input {
-	width: 800px;
+	width: 600px;
 	height: 80px;
 	padding: 10px;
 	border-radius: 10px;
@@ -356,6 +356,7 @@ a {
     will-change: box-shadow,transform;
     font-size: 18px;
 	margin-top: 16px;
+	margin-left: 10px;
 }
 
 .text-area .text-btn .text-send:focus {
