@@ -66,7 +66,7 @@
 
 <script>
 import socket from "@/plugins/socket"
-import { onMounted , ref } from '@vue/runtime-core';
+
     export default 
 	{
         name:'Chatroom-view',
@@ -99,36 +99,14 @@ import { onMounted , ref } from '@vue/runtime-core';
 				else
 				{
 					this.joined = true;
-					// socket.connect();
+					socket.connect();
 					this.$router.push('/messenger');
 				}
 
 			},
 		},
     
-		setup(){
-			const users = ref ([]);
-			onMounted(() => {
-				socket.on("getUsers",(data) => {
-					data.forEach( user => {
-						user.self = user.userId === socket.id					
-					})
-					
-					// sort
-					users.value = data.sort((a,b) => {
-						if (a.self) return -1;
-						if (b.self) return 1;
-						if (a.userName < b.userName) return -1;
-						return a.userName > b.userName ? 1 : 0;
-					})
-				console.log('users:',users.value)
-			})	
-				socket.on("userJustConnected",(data) =>{
-					users.value.push(data)
-					console.log("user just connected:", users.value)
-				})
-			})
-		}
+		
 	}
 </script>
 
