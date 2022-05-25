@@ -99,9 +99,11 @@ import { onMounted , ref } from '@vue/runtime-core';
 				else
 				{
 					this.joined = true;
-					socket.connect();
+					// socket.connect();
+					this.$router.push('/messenger');
 				}
-			}
+
+			},
 		},
     
 		setup(){
@@ -123,7 +125,7 @@ import { onMounted , ref } from '@vue/runtime-core';
 			})	
 				socket.on("userJustConnected",(data) =>{
 					users.value.push(data)
-					console.log("user just connected:",data)
+					console.log("user just connected:", users.value)
 				})
 			})
 		}

@@ -51,8 +51,8 @@ a {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 822px;
-	height: 652px;
+	width: 70%;
+	height: 95%;
 	background-image: linear-gradient(to bottom, #005AA7, #b4b3b0);
 	margin-right: 20px;
 	border-radius: 10px;
@@ -405,6 +405,10 @@ a {
 	.content #text {
 		top: 227px !important;
 	}
+
+	.join-container .chat-rooms {
+		height: 470px;
+	}
 }
 
 /* 125% */
@@ -441,6 +445,10 @@ a {
 
 	.content #text {
 		top: 199px !important;
+	}
+
+	.join-container .chat-rooms {
+		height: 420px;
 	}
 }
 
@@ -491,6 +499,10 @@ a {
 
 	.content #text {
 		top: 166px !important;
+	}
+
+	.join-container .chat-rooms {
+		height: 350px;
 	}
 }
 
