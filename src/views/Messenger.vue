@@ -33,41 +33,6 @@
                             Hí, chào cậu
                         </div>
                     </div>
-                    <div class="messBottom">
-                        9:50
-                    </div>
-                </div>
-    
-                <div class="user-mess-area">
-                    <div class="mes-name">
-                        Nguyễn Văn A
-                    </div>
-                    <div class="messTop">
-                        <img src="../assets/img/dog.png" alt="" class="messImg">
-    
-                        <div class="mess-text">
-                            Cậu tên gì vậy?
-                        </div>
-                    </div>
-                    <div class="messBottom">
-                        9:51
-                    </div>
-                </div>
-    
-                <div class="user-mess-area">
-                    <div class="mes-name">
-                        Nguyễn Văn A
-                    </div>
-                    <div class="messTop">
-                        <img src="../assets/img/dog.png" alt="" class="messImg">
-    
-                        <div class="mess-text">
-                            Mình tên Ngọc   
-                        </div>
-                    </div>
-                    <div class="messBottom">
-                        9:51
-                    </div>
                 </div>
     
                 <div class="others-mess-area">
@@ -76,59 +41,6 @@
                         <div class="mess-text">
                             Chào bạn   
                         </div>
-                    </div>
-    
-    
-                    <div class="messBottom">
-                        9:51
-                    </div>
-                </div>
-    
-                <div class="others-mess-area">
-                    <div class="messTop">
-                        <img src="../assets/img/lion.png" alt="" class="messImg">       
-                        <div class="mess-text">
-                            Mình tên Florentino :)   
-                        </div>
-                    </div>
-    
-    
-                    <div class="messBottom">
-                        9:51
-                    </div>
-                </div>
-
-                <div class="others-mess-area">
-                    <div class="messTop">
-                        <img src="../assets/img/lion.png" alt="" class="messImg">       
-                        <div class="mess-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis 
-                            hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa. 
-                        </div>
-                    </div>
-    
-    
-                    <div class="messBottom">
-                        9:51
-                    </div>
-                </div>
-
-                <div class="user-mess-area">
-                    <div class="mes-name">
-                        Nguyễn Văn A
-                    </div>
-                    <div class="messTop">
-                        <img src="../assets/img/dog.png" alt="" class="messImg">
-    
-                        <div class="mess-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                            incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis 
-                            hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa.    
-                        </div>
-                    </div>
-                    <div class="messBottom">
-                        9:51
                     </div>
                 </div>
             </div>
