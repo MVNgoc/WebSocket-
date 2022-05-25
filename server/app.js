@@ -22,7 +22,7 @@ io.use((socket,next) => {
 
 io.on("connection",(socket,next) => {
     console.log("a user connected");
-
+    
     const users = [];
     
     for (let [id,socket] of io.of("/").sockets) {

@@ -6,6 +6,7 @@
 				<label class="username" for="input-username">Tên của bạn</label>
 				<input type="text" v-model="userName" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
 				<button type="submit" id="btn-create-chat-room">Tạo phòng</button>
+
 			</form>
 		</div>
 
@@ -66,7 +67,6 @@
 
 <script>
 import socket from "@/plugins/socket"
-
     export default 
 	{
         name:'Chatroom-view',
@@ -105,8 +105,6 @@ import socket from "@/plugins/socket"
 
 			},
 		},
-    
-		
 	}
 </script>
 

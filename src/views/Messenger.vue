@@ -13,15 +13,9 @@
                 <p class="chat-room-online-user">5</p>
             </div>
     
-            <div v-for="user in users" :key="user.userI" class="users-online">
-                <div class="user-online">
-                    <img src="../assets/img/dog.png" alt="" class="messImg">
-                    <div class="user-name">Nguyễn Văn A</div>
-                </div>
-
-                <div class="user-online">
-                    <img src="../assets/img/lion.png" alt="" class="messImg">
-                    <div class="user-name">Nguyễn Văn A</div>
+            <div class="users-online">
+                <div v-for="user in users" :key="user.userId" class="user-online">
+                    <div class="user-name">{{user.userName}}</div>
                 </div>
             </div>
         </div>
@@ -157,7 +151,7 @@ import { onMounted , ref } from '@vue/runtime-core';
 export default {
     name: 'Messenger-view',
     setup(){
-			const users = ref ([]);
+            const users = ref([])
 			onMounted(() => {
 				socket.on("getUsers",(data) => {
 					data.forEach( user => {
@@ -165,7 +159,7 @@ export default {
 					})
 					
 					// sort
-					users.value = data.sort((a,b) => {
+				users.value = data.sort((a,b) => {
 						if (a.self) return -1;
 						if (b.self) return 1;
 						if (a.userName < b.userName) return -1;
@@ -178,6 +172,7 @@ export default {
 					console.log("user just connected:", users.value)
 				})
 			})
+            return { users };
 		}
 }
 </script>
