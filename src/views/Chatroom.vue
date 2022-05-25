@@ -66,14 +66,13 @@
 
 <script>
 import socket from "@/plugins/socket"
-import { onMounted } from '@vue/runtime-core';
+import { onMounted,ref } from '@vue/runtime-core';
     export default {
         name:'Chatroom-view',
 		data() {
 			return {
-				userName: false,
+				userName: "",
 				joined: false,
-				currentUser: "",
 			}
 		},
 		methods: {
@@ -97,12 +96,22 @@ import { onMounted } from '@vue/runtime-core';
 		},
     
 		setup(){
+			const users = ref([])
 			onMounted(() =>{
 				socket.on("getUsers",(data) => {
-					return console.log("get users",data)
+					data.forEach( user => {
+						user.self = user.useId === socket.id					
+					});
+					
+					users.value = data.sort((a,b) => {
+						if (a.self) return -1;
+						if (b.self) return 1;
+						if (a.userName < b.userName) return -1;
+						return a.userName > b.userName ? 1 : 0;
+					})
 				})
-			})
-			
+				console.log('users:',users.value)
+			})	
 		}	
 	}
 </script>
