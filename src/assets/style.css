@@ -455,6 +455,25 @@ a {
 	}	
 }
 
+/* Mobile */
+@media (max-width: 740px) {
+	.join-container #input-username {
+		width: 80%;
+		height: 30px;
+		margin-top: 10px;
+		font-size: 12px;
+	}
+
+	.join-container .chat-rooms {
+		width: 40%;
+		height: 480px;
+	}
+
+	.chat-room-main .chat-room-btn-join {
+		width: 50px;
+		height: 40px;
+	}
+}
 
 .info-room-container .back-icon {
 	width: 16%;
