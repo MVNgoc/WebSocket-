@@ -12,16 +12,11 @@
                 <p >Online</p>
                 <p class="chat-room-online-user">5</p>
             </div>
-    
-            <div v-for="user in users" :key="user.userI" class="users-online">
+            
+            <div class="users-online">
                 <div class="user-online">
                     <img src="../assets/img/dog.png" alt="" class="messImg">
-                    <div class="user-name">Nguyễn Văn A</div>
-                </div>
-
-                <div class="user-online">
-                    <img src="../assets/img/lion.png" alt="" class="messImg">
-                    <div class="user-name">Nguyễn Văn A</div>
+                    <div class="user-name">Trần Văn A</div>
                 </div>
             </div>
         </div>
@@ -171,6 +166,7 @@ export default {
 						if (a.userName < b.userName) return -1;
 						return a.userName > b.userName ? 1 : 0;
 					})
+                    
 				console.log('users:',users.value)
 			})	
 				socket.on("userJustConnected",(data) =>{

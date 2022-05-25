@@ -77,16 +77,6 @@ import socket from "@/plugins/socket"
 			}
 		},
 		methods: {
-			join() {
-				if(this.currentUser == "") {
-					alert("Bạn chưa nhập tên!");
-					return;
-				}
-				else{
-					this.joined = true;
-				}
-				console.log(this.currentUser);
-			},
 			onConnection : function(){
 				socket.auth = {
 					userName : this.userName
@@ -102,11 +92,8 @@ import socket from "@/plugins/socket"
 					socket.connect();
 					this.$router.push('/messenger');
 				}
-
 			},
 		},
-    
-		
 	}
 </script>
 
