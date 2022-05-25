@@ -40,6 +40,11 @@ io.on("connection",(socket) => {
         userName: socket.userName,
     })
 
+    socket.on("privateMessage",({message,to}) => {
+        console.log("message",to,message)
+        socket.to(to).emit    
+    })
+
     socket.on("disconnect",() =>{
         console.log("a user disconnected");
     });

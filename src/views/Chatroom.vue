@@ -12,7 +12,7 @@
 					<div class="user-mess-area">
 						<div class="messTop">
 							<img src="../assets/img/dog.png" alt="" class="messImg">
-		
+							
 							<div class="mess-text">
 								Hí, chào cậu
 							</div>
@@ -29,12 +29,12 @@
 					</div>
 				</div>
 				
-				<form class="text-area">
+				<form class="text-area" @submit.prevent="onSendMessage">
 					<div class="text-mess">
-						<textarea maxlength="10000" class="text-input" placeholder="Nhập tin nhắn...." required></textarea>
+						<textarea v-mode="message" maxlength="10000" class="text-input" placeholder="Nhập tin nhắn...." required></textarea>
 					</div>
 					<div class="text-btn">
-						<button class="text-send">Gửi</button>
+						<button type="submit" class="text-send">Gửi</button>
 					</div>
 				</form>
 			</div>
@@ -47,9 +47,7 @@
 						<h3>{{user.userName}}</h3>
 					</header>
 					<main class="chat-room-main">
-						<form @submit.prevent="onConnection">
-							<button type="submit" class="chat-room-btn-join">Nhắn tin</button>
-						</form>
+						<button @click="onSelectedUserToSend(user)" class="chat-room-btn-join">Nhắn tin</button>
 					</main>
 				</div>
 			</div>
@@ -66,9 +64,10 @@ import { onMounted , ref } from '@vue/runtime-core';
 		data() {
 			return {
 				userName: "",
-				userRoom: "",
 				joined: false,
-				isChoose: false
+				isChoose: false,
+				selectedUserToSend: "",
+				message:""
 			}
 		},
 		methods: {
@@ -88,9 +87,19 @@ import { onMounted , ref } from '@vue/runtime-core';
 					//this.$router.push('/messenger');
 				}
 			},
+			onSelectedUserToSend : function(user){
+				this.isChoose = true;
+				selectedUserToSend.value = user;
+			},
+			onSendMessage : function(){
+				socket.emit("privateMessage"),{
+					message : this.message,
+					to : this.selectedUserToSend.userId
+				}
+			}
 		},	
 		setup(){
-            const users = ref([]);
+            const users = ref([])
 			onMounted(() => {
 				socket.on("getUsers",(data) => {
 					data.forEach( user => {
