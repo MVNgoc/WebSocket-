@@ -2,9 +2,9 @@
     <div class="join-container" :style="{
 		'background': 'linear-gradient(#2b1055,#7597de)'}">
 		<div class="user-information">
-			<form class="user-name-form">
+			<form class="user-name-form" @submit.prevent="onConnection">
 				<label class="username" for="input-username">Tên của bạn</label>
-				<input type="text" v-model="currentUser" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
+				<input type="text" v-model="userName" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
 				<button type="submit" id="btn-create-chat-room">Tạo phòng</button>
 			</form>
 		</div>
@@ -18,7 +18,7 @@
 					<p>Online</p>
 					<p class="chat-room-online-user">0</p>
 					<form @submit.prevent="onConnection">
-						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
+						<button type="submit" class="chat-room-btn-join">Tham gia</button>
 					</form>
 				</main>
 			</div>
@@ -66,6 +66,7 @@
 
 <script>
 import socket from "@/plugins/socket"
+import { onMounted } from '@vue/runtime-core';
     export default {
         name:'Chatroom-view',
 		data() {
@@ -87,10 +88,23 @@ import socket from "@/plugins/socket"
 				console.log(this.currentUser);
 			},
 			onConnection : function(){
+				this.joined = true;
+				socket.auth = {
+					userName : this.userName
+				}
 				socket.connect();
 			}
-		}
-    }
+		},
+    
+		setup(){
+			onMounted(() =>{
+				socket.on("getUsers",(data) => {
+					return console.log("get users",data)
+				})
+			})
+			
+		}	
+	}
 </script>
 
 <style scoped>
