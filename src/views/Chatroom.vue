@@ -71,7 +71,11 @@ import { onMounted,ref } from '@vue/runtime-core';
         name:'Chatroom-view',
 		data() {
 			return {
+<<<<<<< HEAD
 				userName: "",
+=======
+				userName: '',
+>>>>>>> 56f08074c6127ea41d5128cfd61cd7393240b9f3
 				joined: false,
 			}
 		},
@@ -96,8 +100,7 @@ import { onMounted,ref } from '@vue/runtime-core';
 		},
     
 		setup(){
-			const users = ref([])
-			onMounted(() =>{
+			onMounted(() => {
 				socket.on("getUsers",(data) => {
 					data.forEach( user => {
 						user.self = user.useId === socket.id					
