@@ -7,7 +7,7 @@
 				<input type="text" v-model="userName" placeholder="Nhập tên của bạn..." required id="input-username" name="input-username" >
 				<button type="submit" id="btn-create-chat-room">Kết Nối</button>
 			</form>
-			<div class="messenger" v-if="isChoose">
+			<div class="messenger">
 				<div class="messenger-text">
 					<div class="user-mess-area">
 						<div class="messTop">
