@@ -10,9 +10,9 @@
 		</div>
 
 		<div class="chat-rooms">
-			<div class="chat-room">
+			<div  v-for="user in users" :key="user.userId" class="chat-room">
 				<header class="chat-room-header">
-					<h3>Phòng chat 1</h3>
+					<h3>{{user.userName}}</h3>
 				</header>
 				<main class="chat-room-main">
 					<p>Online</p>
@@ -22,50 +22,13 @@
 					</form>
 				</main>
 			</div>
-			<div class="chat-room">
-				<header class="chat-room-header">
-					<h3>Phòng chat 2</h3>
-				</header>
-				<main class="chat-room-main">
-					<p>Online</p>
-					<p class="chat-room-online-user">0</p>
-					<form @submit.prevent="onConnection">
-						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
-					</form>
-				</main>
-			</div>
-
-			<div class="chat-room">
-				<header class="chat-room-header">
-					<h3>Phòng chat 3</h3>
-				</header>
-				<main class="chat-room-main">
-					<p>Online</p>
-					<p class="chat-room-online-user">0</p>
-					<form @submit.prevent="onConnection">
-						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
-					</form>
-				</main>
-			</div>
-
-			<div class="chat-room">
-				<header class="chat-room-header">
-					<h3>Phòng chat 4</h3>
-				</header>
-				<main class="chat-room-main">
-					<p>Online</p>
-					<p class="chat-room-online-user">0</p>
-					<form @submit.prevent="onConnection">
-						<button type="submit"  class="chat-room-btn-join">Tham gia</button>
-					</form>
-				</main>
-			</div>
 		</div>
 	</div>
 </template>
 
 <script>
 import socket from "@/plugins/socket"
+import { onMounted , ref } from '@vue/runtime-core';
     export default 
 	{
         name:'Chatroom-view',
@@ -80,7 +43,6 @@ import socket from "@/plugins/socket"
 			onConnection : function(){
 				socket.auth = {
 					userName : this.userName,
-					userRoom : "1",
 				}
 
 				if(socket.auth.userName == "") {
@@ -91,10 +53,35 @@ import socket from "@/plugins/socket"
 				{
 					this.joined = true;
 					socket.connect();
-					this.$router.push('/messenger');
+					//this.$router.push('/messenger');
 				}
 			},
 		},	
+		setup(){
+            const users = ref([]);
+			onMounted(() => {
+				socket.on("getUsers",(data) => {
+					data.forEach( user => {
+						user.self = user.userId === socket.id					
+					})
+					
+					// sort
+				users.value = data.sort((a,b) => {
+						if (a.self) return -1;
+						if (b.self) return 1;
+						if (a.userName < b.userName) return -1;
+						return a.userName > b.userName ? 1 : 0;
+					})
+                    
+				console.log('users:',users.value)
+			})	
+				socket.on("userJustConnected",(data) =>{
+					users.value.push(data)
+					console.log("user just connected:", users.value)
+				})
+			})
+            return { users };
+		}
 	}
 </script>
 

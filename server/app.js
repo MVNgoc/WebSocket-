@@ -14,20 +14,13 @@ const io = new Server(server,{
 
 io.use((socket,next) => {
     const userName = socket.handshake.auth?.userName;
-    const userRoom = socket.handshake.auth?.userRoom;
     if (!userName) return next(new Error("no fill username"));
     
     socket.userName = userName;
-    socket.userRoom = userRoom;
 
     next();
 })
-io.use((socket,next) => {
-    const userRoom = socket.handshake.auth?.userRoom;
-    socket.userRoom = userRoom;
 
-    next();
-})
 io.on("connection",(socket) => {
     console.log("a user connected");
     
@@ -36,8 +29,7 @@ io.on("connection",(socket) => {
     for (let [id,socket] of io.of("/").sockets) {
         users.push({
             userId   : id,
-            userName : socket.userName,
-            userRoom : socket.userRoom 
+            userName : socket.userName
         })
     }
     
@@ -46,7 +38,6 @@ io.on("connection",(socket) => {
     socket.broadcast.emit("userJustConnected",{
         userId: socket.id,
         userName: socket.userName,
-        userRoom: socket.userRoom
     })
 
     socket.on("disconnect",() =>{
